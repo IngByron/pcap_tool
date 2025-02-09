@@ -1,0 +1,64 @@
+/* Estilos Globales */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f2f5;
+}
+
+.layout {
+  background: #fff;
+}
+
+.titulo-principal {
+  background: #001529;
+  display: flex;
+  justify-content: center; /* Centrado horizontal */
+  align-items: center;     /* Centrado vertical */
+  height: 100px;           /* Altura del header */
+  padding: 0;
+}
+
+.title {
+  color: white;
+  margin: 0; /* Elimina los márgenes por defecto */
+  font-weight: 600;
+  text-align: center; /* Centrado horizontal también */
+}
+
+/* Contenedor principal del componente */
+.file-upload-container {
+  padding: 24px;
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Título principal */
+.file-upload-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333333;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+
+/* Botones */
+.file-upload-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+
+/* Estilo del archivo seleccionado */
+.selected-file-text {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333333;
+  text-align: center;
+}
