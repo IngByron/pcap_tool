@@ -13,4 +13,4 @@ app.config['MAX_CONTENT_LENGTH'] = 10 * 1024 * 1024  # Límite de 10 MB
 app.register_blueprint(bp)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=5000, debug=True)

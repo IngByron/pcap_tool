@@ -1,7 +1,6 @@
 import os
 import pyshark
 import asyncio
-import subprocess
 from flask import current_app
 from pyshark import tshark
 

@@ -16,3 +16,11 @@ def is_valid_pcap(file):
     except Exception as e:
         print(f"Error al validar archivo: {e}")
         return False
+    
+def allowed_file(file):
+    """Verifica si el archivo tiene una extensión permitida (.pcap o .pcapng)."""
+    allowed_extensions = {'pcap', 'pcapng'}
+    if '.' in file and file.rsplit('.', 1)[1].lower() in allowed_extensions:
+        return True
+    
+    return False

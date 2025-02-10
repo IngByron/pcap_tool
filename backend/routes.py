@@ -1,7 +1,7 @@
 from flask import Blueprint, request, jsonify
 from flask_cors import cross_origin  
 from services.file_service import save_file, list_files
-from utils.validation import is_valid_pcap
+from utils.validation import allowed_file
 from services.analize_packet import analyze_packets
 
 bp = Blueprint('routes', __name__)
@@ -13,6 +13,8 @@ def upload_file():
         if 'file' not in request.files:
             return jsonify({'error': 'No se ha enviado un archivo'}), 400
         file = request.files['file']
+        if not allowed_file(file.filename):
+            return jsonify({'error': 'Archivo no válido'}), 400
         file_path = save_file(file)
         if file_path is None:  # Si ocurrió un error en save_file()
             return jsonify({'error': 'No se pudo guardar el archivo'}), 500
